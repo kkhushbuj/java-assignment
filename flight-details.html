@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flight details – Cancelled</title>
+<style>
+  :root {
+    --bg: #eef1f6;
+    --card: #fff;
+    --ink: #1c1c24;
+    --muted: #6b6f7b;
+    --line: #dde1e8;
+    --red: #c8102e;
+    --red-bg: #fdecef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px 16px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 540px; margin: 0 auto; }
+  h1 { font-size: 34px; margin: 0 0 20px; }
+  h2 { font-size: 24px; margin: 0 0 14px; }
+  h2 span { font-weight: 400; color: var(--muted); }
+
+  .card { background: var(--card); border-radius: 16px; overflow: hidden; }
+  .banner {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--red-bg); color: var(--red);
+    padding: 14px 20px; font-weight: 700; font-size: 17px;
+    border-bottom: 1px solid #f6c9d1;
+  }
+  .banner svg { flex: none; }
+  .banner small { display: block; font-weight: 400; color: #8a2a3a; font-size: 13px; }
+
+  .summary { padding: 20px 20px 14px; border-bottom: 1px solid var(--line); }
+  .airline { font-weight: 700; font-size: 16px; margin-bottom: 14px; }
+  .route { display: flex; align-items: center; gap: 14px; }
+  .time { text-align: center; }
+  .time b { display: block; font-size: 28px; }
+  .time span { font-size: 20px; color: var(--muted); }
+  .cancelled .time b, .cancelled .time span { text-decoration: line-through; opacity: .55; }
+  .mid { flex: 1; text-align: center; font-size: 14px; color: var(--muted); }
+  .mid .bar { position: relative; height: 3px; background: #c9ccd4; margin: 8px 0; }
+  .mid .bar::after { content: "✈"; position: absolute; right: -4px; top: -11px; background: var(--card); color: #8a8d99; font-size: 18px; }
+  .mid .direct { color: #868a96; font-size: 17px; }
+  .tag-cancelled { color: var(--red); font-weight: 700; font-size: 17px; }
+
+  .detail { padding: 20px; }
+  .flight-no { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 18px; margin-bottom: 14px; }
+  .timeline { margin-left: 8px; padding-left: 36px; border-left: 2px solid #cfd3db; position: relative; }
+  .timeline::before, .timeline::after {
+    content: ""; position: absolute; left: -6px; width: 10px; height: 10px;
+    border-radius: 50%; background: var(--card); border: 2px solid #b5b9c4;
+  }
+  .timeline::before { top: 6px; }
+  .timeline::after { bottom: 6px; }
+  .stop { font-size: 24px; margin: 4px 0 18px; }
+  .stop b { font-weight: 400; display: inline-block; width: 90px; }
+  .cancelled .stop { text-decoration: line-through; opacity: .55; }
+  .dur { color: var(--muted); font-size: 22px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .info { font-size: 20px; margin-bottom: 16px; }
+  .info u { margin-left: 8px; }
+  .meta { margin-top: 24px; font-size: 17px; line-height: 1.7; }
+  .meta strong { font-weight: 700; }
+  .meta .status { color: var(--red); font-weight: 700; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Flight details</h1>
+  <h2>Outbound <span>Sat, 17 Oct 2026</span></h2>
+
+  <section class="card cancelled" aria-label="Cancelled flight VS359">
+    <div class="banner" role="alert">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 8l8 8M16 8l-8 8"/></svg>
+      <div>Flight cancelled<small>Your flight ticket has been cancelled.</small></div>
+    </div>
+
+    <div class="summary">
+      <div class="airline">Virgin Atlantic</div>
+      <div class="route">
+        <svg width="80" height="60" viewBox="0 0 80 60" aria-hidden="true"><path d="M2 8 Q40 -2 78 4 L60 52 Q40 44 12 50 Z" fill="#c8102e" opacity=".55"/><text x="22" y="34" fill="#fff" font-family="cursive" font-size="16" transform="rotate(-18 22 34)">Virgin</text></svg>
+        <div class="time"><b>04:25</b><span>BOM</span></div>
+        <div class="mid">10h 05<div class="bar"></div><div class="tag-cancelled">Cancelled</div></div>
+        <div class="time"><b>10:00</b><span>LHR</span></div>
+      </div>
+    </div>
+
+    <div class="detail">
+      <div class="flight-no">
+        <svg width="60" height="40" viewBox="0 0 80 60" aria-hidden="true"><path d="M2 8 Q40 -2 78 4 L60 52 Q40 44 12 50 Z" fill="#c8102e" opacity=".55"/></svg>
+        Virgin Atlantic VS359
+      </div>
+      <div class="timeline">
+        <div class="stop"><b>04:25</b> BOM Mumbai</div>
+        <div class="dur">
+          <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#777"/><path d="M12 6v6l4 2" stroke="#fff" stroke-width="2" fill="none"/></svg>
+          10h 05
+        </div>
+        <div class="info">🍴 &nbsp;📺 &nbsp;📶 &nbsp;🔌 <u>Show info</u></div>
+        <div class="stop"><b>10:00</b> LHR London Heathrow</div>
+      </div>
+      <div class="meta">
+        <div><strong>Status:</strong> <span class="status">Cancelled</span></div>
+        <div><strong>Arrives:</strong> Sat, 17 Oct 2026</div>
+        <div><strong>Journey duration:</strong> 10h 05</div>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
