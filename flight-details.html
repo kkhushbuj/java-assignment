@@ -63,7 +63,7 @@
   .stop b { font-weight: 400; display: inline-block; width: 90px; }
   .cancelled .stop { text-decoration: line-through; opacity: .55; }
   .dur { color: var(--muted); font-size: 22px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
-  .info { font-size: 20px; margin-bottom: 16px; }
+  .info { font-size: 20px; margin-bottom: 16px; display: flex; align-items: center; }
   .info u { margin-left: 8px; }
   .meta { margin-top: 24px; font-size: 17px; line-height: 1.7; }
   .meta strong { font-weight: 700; }
@@ -84,7 +84,7 @@
     <div class="summary">
       <div class="airline">Virgin Atlantic</div>
       <div class="route">
-        <svg width="80" height="60" viewBox="0 0 80 60" aria-hidden="true"><path d="M2 8 Q40 -2 78 4 L60 52 Q40 44 12 50 Z" fill="#c8102e" opacity=".55"/><text x="22" y="34" fill="#fff" font-family="cursive" font-size="16" transform="rotate(-18 22 34)">Virgin</text></svg>
+        <img src="assets/virgin-logo-large.png" width="80" alt="Virgin Atlantic">
         <div class="time"><b>04:25</b><span>BOM</span></div>
         <div class="mid">10h 05<div class="bar"></div><div class="tag-cancelled">Cancelled</div></div>
         <div class="time"><b>10:00</b><span>LHR</span></div>
@@ -93,16 +93,16 @@
 
     <div class="detail">
       <div class="flight-no">
-        <svg width="60" height="40" viewBox="0 0 80 60" aria-hidden="true"><path d="M2 8 Q40 -2 78 4 L60 52 Q40 44 12 50 Z" fill="#c8102e" opacity=".55"/></svg>
+        <img src="assets/virgin-logo-small.png" width="52" alt="">
         Virgin Atlantic VS359
       </div>
       <div class="timeline">
         <div class="stop"><b>04:25</b> BOM Mumbai</div>
         <div class="dur">
-          <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#777"/><path d="M12 6v6l4 2" stroke="#fff" stroke-width="2" fill="none"/></svg>
+          <img src="assets/clock.png" width="26" alt="">
           10h 05
         </div>
-        <div class="info">🍴 &nbsp;📺 &nbsp;📶 &nbsp;🔌 <u>Show info</u></div>
+        <div class="info"><img src="assets/amenities.png" width="110" alt="Meals, entertainment, Wi-Fi, power"><u>Show info</u></div>
         <div class="stop"><b>10:00</b> LHR London Heathrow</div>
       </div>
       <div class="meta">
